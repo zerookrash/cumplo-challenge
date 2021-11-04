@@ -1,5 +1,5 @@
 * {
-  background: #353f47;
+  background: rgba(53, 63, 71, 0.9);
   color: #fff;
 }
 
@@ -14,7 +14,8 @@
   justify-content: space-between;
 }
 
-.container header {
+.container .header {
+  background: transparent;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,4 +25,8 @@
 .container img {
   width: 30%;
   height: auto;
+}
+
+.container .title {
+  margin-bottom: 60px;
 }
