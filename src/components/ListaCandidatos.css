@@ -3,13 +3,25 @@
   text-align: center;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  margin: 50px auto;
+}
+
 .row {
   width: 80vw;
   margin: 10px auto;
 }
 
 .votes {
-  color: red;
+  color: #ff5678;
   font-size: 2rem;
   margin-right: 20px;
 }
