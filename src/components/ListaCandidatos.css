@@ -16,12 +16,13 @@ img {
 }
 
 .row {
-  width: 80vw;
+  width: 90vw;
+  max-width: 1100px;
   margin: 10px auto;
 }
 
 .votes {
   color: #ff5678;
   font-size: 2rem;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
