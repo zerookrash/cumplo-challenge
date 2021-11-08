@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./CountDown.css";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
 
 const CountDown = () => {
   const [countDown, setCountDown] = useState(1);
+  let navigate = useNavigate();
 
   const countDownApi = () => {
     const url = "http://localhost:3001/api/v1/countdown";
@@ -17,19 +18,18 @@ const CountDown = () => {
       };
       let c = `${timer.minutes}:${timer.seconds}`;
       setCountDown(c);
+
+      if (res.data.secondsLeft === 0) {
+        navigate("/winner");
+      }
     });
   };
 
   useEffect(() => {
     setTimeout(() => {
-      if (countDown !== 0) {
-        countDownApi();
-      } else {
-        console.log("Navegar");
-        <Redirect to="/winer" />;
-      }
+      countDownApi();
     }, 1000);
-  }, [countDown]);
+  });
 
   return <div className="countDown">{countDown}</div>;
 };

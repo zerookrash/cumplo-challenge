@@ -11,7 +11,6 @@ const WinerPage = () => {
       "Content-Type": "application/json",
     };
     axios.get(url, { headers: { headers } }).then((res) => {
-      console.log(res.data);
       setWiner(res.data);
     });
   };

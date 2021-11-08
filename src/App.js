@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -23,10 +23,10 @@ function App() {
           <h1>El empleado del mes</h1>
         </div>
 
-        <Switch>
-          <Route path="/" exact component={ListaCandidatos} />
-          <Route path="/winner" component={WinerPage} />
-        </Switch>
+        <Routes>
+          <Route path="/" exact element={<ListaCandidatos />} />
+          <Route path="/winner" element={<WinerPage />} />
+        </Routes>
       </div>
     </Router>
   );
